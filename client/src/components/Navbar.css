@@ -1,0 +1,45 @@
+.nav-root {
+    position: sticky;
+    top: 0;
+    z-index: 1300;
+    background-color: white;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.app-bar-shadow {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.nav-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* This will align the items vertically */
+    padding: 15px 10px; /* Increased the vertical padding to accommodate the larger text */
+    max-width: 1200px;
+}
+
+.nav-title {
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.nav-logo {
+    margin-right: 16px;
+    height: 30px; /* Adjust the logo height as needed */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: teal;
+}
