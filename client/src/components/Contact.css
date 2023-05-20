@@ -1,10 +1,17 @@
 .contact-form {
     width: 50%;
+    max-width: 500px; /* Adjust as needed */
     margin: 2em auto;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     text-align: left;
+}
+
+@media (max-width: 600px) {
+    .contact-form {
+        width: 90%; /* Use a higher percentage to give some side padding */
+    }
 }
 
 .field-spacing {
@@ -61,6 +68,7 @@ select, input, textarea {
 label {
     font-weight: bold;
 }
+
 .field-group {
     display: flex;
     justify-content: space-between;
@@ -73,6 +81,21 @@ label {
 
 .field-group .field-spacing:last-child {
     margin-right: 0;
+}
+
+@media (max-width: 600px) {
+    .field-group {
+        flex-direction: column;
+    }
+
+    .field-group .field-spacing {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .field-group .field-spacing:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .submit-button {
@@ -98,11 +121,13 @@ button:hover {
     color: black; 
     border: 2px solid #007BFF;
 }
+
 .services-checkbox {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
 .services-checkbox .service-item {
     display: flex;
     align-items: center;
@@ -113,6 +138,7 @@ button:hover {
     margin-left: 10px;
     white-space: nowrap;
 }
+
 .services-label {
     display: block;
     margin-bottom: 1em; /* Adjust as needed */

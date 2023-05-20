@@ -43,3 +43,31 @@
 .nav-link:hover {
     color: teal;
 }
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: start;
+        padding: 1em;
+        gap: 1em;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}

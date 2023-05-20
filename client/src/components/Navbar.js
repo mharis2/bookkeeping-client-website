@@ -5,6 +5,7 @@ import './Navbar.css'; // Import the styles
 
 export default function NavBar() {
   const [isScrolling, setIsScrolling] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,14 @@ export default function NavBar() {
     };
   }, [isScrolling]);
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  }
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   return (
     <nav className={`nav-root ${isScrolling ? 'app-bar-shadow' : ''}`}>
       <div className="nav-toolbar">
@@ -29,12 +38,15 @@ export default function NavBar() {
           <img src="/images/logo.png" alt="Logo" className="nav-logo" />
           South Side Bookkeepers
         </div>
-        <div className="nav-links">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="/services" className="nav-link">Services</Link>
-          <Link to="/team" className="nav-link">Team</Link>
-          <Link to="/about" className="nav-link">About</Link>
-          <Link to="/contact" className="nav-link">Contact Us</Link>
+        <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+          <Link onClick={closeMenu} to="/" className="nav-link">Home</Link>
+          <Link onClick={closeMenu} to="/services" className="nav-link">Services</Link>
+          <Link onClick={closeMenu} to="/team" className="nav-link">Team</Link>
+          <Link onClick={closeMenu} to="/about" className="nav-link">About</Link>
+          <Link onClick={closeMenu} to="/contact" className="nav-link">Contact Us</Link>
+        </div>
+        <div className="menu-icon" onClick={toggleMenu}>
+          ☰
         </div>
       </div>
     </nav>
