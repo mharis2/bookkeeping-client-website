@@ -69,8 +69,12 @@ const ContactUs = () => {
     
 
     return (
-        <div className="contact-form">
-            <h1>Contact Us</h1>
+        <div className="contact-form-unique"> {/* Update class name */}
+            <div className="intro-text-unique"> {/* Update class name */}
+                <p className="strong-text-unique">Connect With Us Today!</p> {/* Update class name */}
+                <p>Submit the form below and expect a response within the next business day.</p>
+            </div>
+
             {error && <div className="error-message field-spacing">{error}</div>}
             {success && <div className="success-message field-spacing">{success}</div>}
             <form onSubmit={handleSubmit}>

@@ -1,6 +1,6 @@
-.contact-form {
+.contact-form-unique {
     width: 50%;
-    max-width: 500px; /* Adjust as needed */
+    max-width: 1000px;
     margin: 2em auto;
     display: flex;
     flex-direction: column;
@@ -8,10 +8,22 @@
     text-align: left;
 }
 
-@media (max-width: 600px) {
-    .contact-form {
-        width: 90%; /* Use a higher percentage to give some side padding */
-    }
+.intro-text-unique {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.intro-text-unique .strong-text-unique {
+    font-weight: 700;
+    font-size: 3em;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+.intro-text-unique p {
+    font-weight: 300;
+    font-size: 2em;
+    color: #333;
 }
 
 .field-spacing {
@@ -55,7 +67,6 @@
     margin-top: 1em;
 }
 
-/* Update the CSS rules for the select, input, and textarea elements */
 select, input, textarea {
     width: 100%;
     padding: 8px;
@@ -81,21 +92,6 @@ label {
 
 .field-group .field-spacing:last-child {
     margin-right: 0;
-}
-
-@media (max-width: 600px) {
-    .field-group {
-        flex-direction: column;
-    }
-
-    .field-group .field-spacing {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .field-group .field-spacing:last-child {
-        margin-bottom: 0;
-    }
 }
 
 .submit-button {
@@ -141,5 +137,40 @@ button:hover {
 
 .services-label {
     display: block;
-    margin-bottom: 1em; /* Adjust as needed */
+    margin-bottom: 1em;
+}
+
+@media (max-width: 600px) {
+    .contact-form-unique {
+        width: 90%;
+    }
+
+    .intro-text-unique .strong-text-unique {
+        font-size: 2em;
+    }
+
+    .intro-text-unique p {
+        font-size: 1.2em;
+    }
+
+    .contact-form-row {
+        flex-direction: column;
+    }
+
+    .contact-form-row>* {
+        flex-basis: auto;
+    }
+
+    .field-group {
+        flex-direction: column;
+    }
+
+    .field-group .field-spacing {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .field-group .field-spacing:last-child {
+        margin-bottom: 0;
+    }
 }
